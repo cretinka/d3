@@ -1,0 +1,15 @@
+{% extends 'default.html' %}
+{%load censor %}
+
+{% block content %}
+<html>
+<head>
+    <title>{{ article.title|censor }}</title>
+</head>
+<body>
+    <h1>{{ article.title|censor }}</h1>
+    <p>{{ article.text|censor }}</p>
+    <p>Дата публикации: {{ article.date }}</p>
+</body>
+</html>
+{% endblock content %}
